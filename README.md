@@ -24,7 +24,14 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This template intends to provide you with a [Nest][nest] framework starter
+repository that complies with [The Twelve Factor App][12factor] guidelines.
+
+It provides the following features:
+
+- Config service - Set to fail if required variables are not found.
+- Auth module with JWT strategy, login & sign up.
+- DB config (PostgreSQL or CockroachDB).
 
 ## Installation
 
@@ -44,6 +51,14 @@ $ pnpm run start:dev
 # production mode
 $ pnpm run start:prod
 ```
+
+When the app starts, it looks for the configuration in environment variables. If
+such variables are not set, it fails on start. These variables can be also set
+with a `.env` file.
+
+The required variables can be found (or modified) at
+[this file](./src/common/config/configuration.schema.ts). Or use `.env.sample`
+as a reference.
 
 ## Test
 
@@ -71,3 +86,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+[nest]: https://github.com/nestjs/nest
+[12factor]: https://github.com/nestjs/nest
