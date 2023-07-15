@@ -32,6 +32,7 @@ It provides the following features:
 - Config service - Set to fail if required variables are not found.
 - Auth module with JWT strategy, login & sign up.
 - DB config (PostgreSQL or CockroachDB).
+- Basic GH Workflow.
 
 ## Installation
 
